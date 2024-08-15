@@ -8,6 +8,27 @@ import CodeBlock from "@/components/root/renderpage/CodeBlock";
 import { Nextcomponents } from "@/src/render/constants/nextComp"; // Import your components array
 import { usePathname } from "next/navigation";
 
+// Define the types here or import them
+interface CodeBundle {
+    code: string;
+    SrcCode?: {
+        name: string;
+        code: string;
+    }[];
+    dependencies: string[];
+    Modifications?: string; // Optional property
+}
+
+interface Component {
+    id: number;
+    name: string;
+    link: string;
+    img: string;
+    description: string;
+    ComponentPath: string;
+    code: CodeBundle;
+}
+
 const Components = () => {
     const [activeTab, setActiveTab] = useState(0);
     const pathname = usePathname();
@@ -19,7 +40,7 @@ const Components = () => {
     }, [pathname]);
 
     // Find the component based on the extracted ID
-    const component = Nextcomponents.find(comp => comp.id === componentId);
+    const component = useMemo(() => Nextcomponents.find(comp => comp.id === componentId), [componentId]);
 
     return (
         <div className="bg-black text-white mt-10 md:ml-10 px-4 w-full h-full max-h-[90%] overflow-y-auto text-base md:text-xl">
@@ -51,7 +72,7 @@ const Components = () => {
             <div id="installation" className="text-lg text-white mt-10">
                 <h1 className="text-2xl font-bold">Installation</h1>
 
-                {component?.code?.dependencies?.length > 0 && (
+                {component?.code?.dependencies?.length ? (
                     <div id="dependency" className="mt-10">
                         <h2>Install all these dependencies</h2>
                         {/* Loop through dependencies */}
@@ -59,16 +80,16 @@ const Components = () => {
                             <CodeBlock key={index} id={`dependency${index + 1}`} code={dependency} />
                         ))}
                     </div>
-                )}
+                ) : null}
 
-                {component?.code?.Modifications && (
+                {component?.code?.Modifications ? (
                     <div id="Modifications" className="mt-10">
                         <h2>Make these Modifications in your GlobalCss</h2>
                         <CodeBlock id="modifications" code={component.code.Modifications} />
                     </div>
-                )}
+                ) : null}
 
-                {component?.code?.SrcCode?.length > 0 && (
+                {component?.code?.SrcCode?.length ? (
                     <div id="SrcCode" className="mt-10">
                         <h2>Add these Components</h2>
                         {/* Loop through SrcCode array */}
@@ -79,7 +100,7 @@ const Components = () => {
                             </div>
                         ))}
                     </div>
-                )}
+                ) : null}
             </div>
         </div>
     );
