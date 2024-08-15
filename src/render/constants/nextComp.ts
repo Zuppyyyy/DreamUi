@@ -11,10 +11,10 @@ export const Nextcomponents = [
   },
   {
     id: 2,
-    name: "Profile Card",
+    name: "Border Box",
     link: "/comp/next/2",
     img: i1.src,
-    description: "A profile card with user information and stats.",
-    ComponentPath: "@/components/render/nextRen/ProfileCard",
+    description: "A border box with beautiful and intresting components",
+    ComponentPath: "@/components/render/nextRen/BorderBox",
   }
 ];
