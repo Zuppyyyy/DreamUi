@@ -26,16 +26,16 @@ const Navbar = () => {
                             </div>
                             <div className="absolute w-48 bg-black text-white rounded-lg border border-white z-[999] hidden group-hover:block">
                                 <div className="py-4" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                    <a href="/components/next" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
+                                    <a href="/comp/next" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
                                         NextJs Components
                                     </a>
-                                    <a href="/components/react" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
+                                    <a href="/comp/react" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
                                         ReactJS Components
                                     </a>
-                                    <a href="/components/static" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
+                                    <a href="/comp/static" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
                                         Static Components
                                     </a>
-                                    <a href="/components" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
+                                    <a href="/comp" className="block px-4 py-2 text-sm text-white hover:text-blue-300">
                                         All Components
                                     </a>
                                 </div>
