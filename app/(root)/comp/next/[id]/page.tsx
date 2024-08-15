@@ -95,7 +95,7 @@ const Components = () => {
                         {/* Loop through SrcCode array */}
                         {component.code.SrcCode.map((srcCode, index) => (
                             <div key={index} className="mt-10">
-                                <div className="bg-zinc-900 border border-zinc-600 inline-block p-2 text-[#ffffff] rounded">{srcCode.name}</div>
+                                <div className="bg-zinc-900 border border-zinc-600 inline-block p-2 text-[#ffffff] rounded text-xs md:text-base">{srcCode.name}</div>
                                 <CodeBlock id={`SourceCode${index + 1}`} code={srcCode.code} />
                             </div>
                         ))}
