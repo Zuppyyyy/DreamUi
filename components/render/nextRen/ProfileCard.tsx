@@ -1,21 +1,4 @@
-// components/ProfileCard.tsx
-
 import React from 'react';
-
-const ProfileCard = () => {
-  return (
-    <div className="w-full min-w-16 h-20 bg-slate-300 text-black border border-pink-400">
-      <h1>This is the first component</h1>
-    </div>
-  );
-};
-
-export default ProfileCard;
-
-export const code =`this will be displayed in the div with id code `
-
-// Example usage code
-export const SrcCode1 = `import React from 'react';
 
 const ProfileCard = () => {
   return (
@@ -25,12 +8,34 @@ const ProfileCard = () => {
   );
 };
 
-export default ProfileCard;`;
+export default ProfileCard;
 
-export const SrcCode2 = `This is just for a test`;
 
-// CSS animation for gradient border
-export const Modifications = `
+export const CodeBundle = {
+  code: `import React from 'react';
+
+const ProfileCard = () => {
+  return (
+    <div className="w-[20rem] h-20 bg-slate-300 text-black border border-pink-400">
+      <h1>This is the first component</h1>
+    </div>
+  );
+};
+
+export default ProfileCard;`,
+
+  SrcCode: [
+    {
+      name: "components/Comp1.tsx",
+      code: `this is also a special test`,
+    },
+    {
+      name: "components/Comp2.tsx",
+      code: `This is just for a test`,
+    },
+  ],
+
+  Modifications: `
 @keyframes gradient-border {
   0% {
     border-color: #f00; /* Red */
@@ -51,10 +56,10 @@ export const Modifications = `
 
 .animate-gradient-border {
   animation: gradient-border 3s infinite;
-}`;
+}`,
 
-// Dependencies list
-export const dependencies = [
-  'npm install framer-motion',
-  'npm install react-icons',
-];
+  dependencies: [
+    'npm install framer-motion',
+    'npm install react-icons',
+  ],
+};

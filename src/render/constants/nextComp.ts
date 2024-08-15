@@ -1,4 +1,6 @@
 import i1 from "@/src/render/Comp-images/next/i1.png";
+import { CodeBundle } from '@/components/render/nextRen/ProfileCard';
+import { BoprderBoxBundle } from "@/components/render/nextRen/BorderBox";
 
 export const Nextcomponents = [
   {
@@ -8,6 +10,7 @@ export const Nextcomponents = [
     img: i1.src,
     description: "A profile card with user information and stats.",
     ComponentPath: "@/components/render/nextRen/ProfileCard",
+    code: CodeBundle,
   },
   {
     id: 2,
@@ -16,5 +19,6 @@ export const Nextcomponents = [
     img: i1.src,
     description: "A border box with beautiful and intresting components",
     ComponentPath: "@/components/render/nextRen/BorderBox",
+    code: BoprderBoxBundle,
   }
 ];

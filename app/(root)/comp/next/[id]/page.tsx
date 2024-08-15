@@ -40,7 +40,10 @@ const Components = () => {
                 )}
                 {activeTab === 1 && (
                     <div className="h-full w-full">
-                        <CodeBlock id="code" code={`import React from 'react';`} />
+                        {/* Render main code */}
+                        {component?.code?.code && (
+                            <CodeBlock id="code" code={component.code.code} />
+                        )}
                     </div>
                 )}
             </div>
@@ -48,30 +51,35 @@ const Components = () => {
             <div id="installation" className="text-lg text-white mt-10">
                 <h1 className="text-2xl font-bold">Installation</h1>
 
-                <div id="dependency" className="mt-10">
-                    <h2>Install all these dependencies</h2>
-                    <CodeBlock id="dependency1" code={`npm install framer-motion`} />
-                    <CodeBlock id="dependency2" code={`npm install i`} />
-                </div>
+                {component?.code?.dependencies?.length > 0 && (
+                    <div id="dependency" className="mt-10">
+                        <h2>Install all these dependencies</h2>
+                        {/* Loop through dependencies */}
+                        {component.code.dependencies.map((dependency, index) => (
+                            <CodeBlock key={index} id={`dependency${index + 1}`} code={dependency} />
+                        ))}
+                    </div>
+                )}
 
-                <div id="Modifications" className="mt-10">
-                    <h2>Make these Modifications in your GlobalCss</h2>
-                    <CodeBlock id="modifications" code={`/* Add your CSS modifications here */`} />
-                </div>
+                {component?.code?.Modifications && (
+                    <div id="Modifications" className="mt-10">
+                        <h2>Make these Modifications in your GlobalCss</h2>
+                        <CodeBlock id="modifications" code={component.code.Modifications} />
+                    </div>
+                )}
 
-                <div id="SrcCode1" className="mt-10">
-                    <h2>Add this Component</h2>
-
-                    <div className="mt-10 bg-zinc-900 border border-zinc-600 inline-block p-2 text-[#ffffff] rounded">component/SrcCode2.tsx</div>
-                    <CodeBlock id="SourceCode1" code={`/* Add the component source code here */`} />
-                </div>
-
-                <div id="SrcCode2" className="mt-10">
-                    <h2>Add this component</h2>
-                    <div className="mt-10 bg-zinc-900 border border-zinc-600 inline-block p-2 text-[#ffffff] rounded">component/SrcCode2.tsx</div>
-                    <CodeBlock id="SourceCode2" code={`/* Add the secondary component source code here */`} />
-                </div>
-
+                {component?.code?.SrcCode?.length > 0 && (
+                    <div id="SrcCode" className="mt-10">
+                        <h2>Add these Components</h2>
+                        {/* Loop through SrcCode array */}
+                        {component.code.SrcCode.map((srcCode, index) => (
+                            <div key={index} className="mt-10">
+                                <div className="bg-zinc-900 border border-zinc-600 inline-block p-2 text-[#ffffff] rounded">{srcCode.name}</div>
+                                <CodeBlock id={`SourceCode${index + 1}`} code={srcCode.code} />
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
