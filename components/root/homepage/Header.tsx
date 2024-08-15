@@ -25,7 +25,7 @@ export function Header() {
                 </div>
                 <div className="flex flex-row max-w-lg cursor-pointer ml-10 space-y-4 md:space-y-0 space-x-0  max-sm:flex-col md:space-x-4">
                     <div className="flex justify-center items-center w-[13rem] h-[3.6rem] rounded-xl bg-white border border-black border-transparent text-black text-lg font-normal">
-                        <a href="/components/">Browse Components</a>
+                        <a href="/comp/">Browse Components</a>
                     </div>
                     <div className="flex justify-center items-center w-[13rem] h-[3.6rem] rounded-xl bg-black border border-white    border-transparent text-white text-lg font-normal">
                         <a href="">Contribute to Dream</a>
