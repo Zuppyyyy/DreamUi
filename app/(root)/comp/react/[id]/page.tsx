@@ -54,13 +54,13 @@ const Components = () => {
             <div className="p-6">
                 {activeTab === 0 && (
                     <div className="h-full w-full">
-                        <div className="border border-zinc-500 p-4 object-contain inline-block min-h-96 w-[100%] md:w-[90%] overflow-auto mt-10 rounded-2xl">
+                        <div className="border border-zinc-500 p-4 object-contain inline-block h-full w-[100%] md:w-[90%] overflow-auto mt-10 rounded-2xl">
                             {/* Overview Content */}
                             {component?.product_img && (
                                 <img
                                     src={component.product_img}
                                     alt={`${component.name} Overview`}
-                                    className="w-full h-auto rounded-xl mt-4"
+                                    className="w-full h-auto min-h-[8rem] rounded-xl"
                                 />
                             )}
                         </div>
