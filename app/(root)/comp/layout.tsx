@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
     return (
         <div className="flex w-full bg-black max-h-screen overflow-y-auto">
-            <div className="max-sm:hidden min-w-[15rem]">
+            <div className="hidden md:block min-w-[15rem]">
                 <Sidebar />
             </div>
             <div className="w-[100%]">

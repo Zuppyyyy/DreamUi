@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useMemo } from "react";
 import { ClipboardDocumentIcon, CheckIcon } from "@heroicons/react/24/outline"; // Importing Heroicon
 import Tabs from "@/components/root/renderpage/Tabs";
@@ -24,6 +23,7 @@ interface Component {
     name: string;
     link: string;
     img: string;
+    product_img: string;
     description: string;
     ComponentPath: string;
     code: CodeBundle;
@@ -43,7 +43,7 @@ const Components = () => {
     const component = useMemo(() => Nextcomponents.find(comp => comp.id === componentId), [componentId]);
 
     return (
-        <div className="bg-black text-white mt-10 md:ml-10 px-4 w-full h-full max-h-[90%] overflow-y-auto text-base md:text-xl">
+        <div className="bg-black text-white mt-10 lg:ml-10 px-4 md:max-w-[70%] lg:max-w-[80%] h-full max-h-[90%] overflow-y-auto text-base md:text-xl">
             <div>
                 <h1 id="name" className="text-5xl font-extrabold">{component?.name || "Component Not Found"}</h1>
                 <p id="description" className="text-lg mt-4 text-zinc-300">{component?.description || "No description available."}</p>
@@ -54,8 +54,15 @@ const Components = () => {
             <div className="p-6">
                 {activeTab === 0 && (
                     <div className="h-full w-full">
-                        <div className="border border-zinc-500 inline-block min-h-96 w-[100%] md:w-[90%] overflow-auto mt-10 rounded-2xl">
+                        <div className="border border-zinc-500 p-4 object-contain inline-block min-h-96 w-[100%] md:w-[90%] overflow-auto mt-10 rounded-2xl">
                             {/* Overview Content */}
+                            {component?.product_img && (
+                                <img
+                                    src={component.product_img}
+                                    alt={`${component.name} Overview`}
+                                    className="w-full h-auto rounded-xl mt-4"
+                                />
+                            )}
                         </div>
                     </div>
                 )}

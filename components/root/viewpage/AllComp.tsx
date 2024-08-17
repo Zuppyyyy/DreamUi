@@ -9,7 +9,6 @@ import { usePathname } from 'next/navigation';
 
 export function AnimatedPinDemo() {
     const pathname = usePathname();
-
     const showNext = pathname.includes("next");
     const showReact = pathname.includes("react");
     const showStatic = pathname.includes("static");
@@ -25,7 +24,7 @@ export function AnimatedPinDemo() {
                             <div key={component.id} className="my-10">
                                 <PinContainer title={component.name} href={component.link}>
                                     <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
-                                        <img src={component.img} alt={component.name} className="w-full h-40 object-cover rounded-lg" />
+                                        <img src={component.img} alt={component.name} className="w-full h-full object-contain rounded-lg" />
                                         <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">{component.name}</h3>
                                         <p className="text-sm text-slate-300 mt-2">{component.description}</p>
                                     </div>
@@ -44,7 +43,7 @@ export function AnimatedPinDemo() {
                             <div key={component.id} className="m-10">
                                 <PinContainer title={component.name} href={component.link}>
                                     <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
-                                        <img src={component.img} alt={component.name} className="w-full h-40 object-cover rounded-lg" />
+                                        <img src={component.img} alt={component.name} className="w-full h-full object-contain rounded-lg" />
                                         <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">{component.name}</h3>
                                         <p className="text-sm text-slate-300 mt-2">{component.description}</p>
                                     </div>
@@ -63,7 +62,7 @@ export function AnimatedPinDemo() {
                             <div key={component.id} className="my-10">
                                 <PinContainer title={component.name} href={component.link}>
                                     <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
-                                        <img src={component.img} alt={component.name} className="w-full h-40 object-cover rounded-lg" />
+                                        <img src={component.img} alt={component.name} className="w-full h-full object-contain rounded-lg" />
                                         <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">{component.name}</h3>
                                         <p className="text-sm text-slate-300 mt-2">{component.description}</p>
                                     </div>

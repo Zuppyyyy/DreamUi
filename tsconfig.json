@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "components/render/reactRen/id1/VideoCar.js", "components/render/nextRen/id1/CodeBlockSnippet.js", "components/render/nextRen/id1/CopyButtonSnippet.js", "components/render/nextRen/id1/ExampleComponent.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -35,28 +35,19 @@ export default ProfileCard;`,
     },
   ],
 
-  Modifications: `
-@keyframes gradient-border {
-  0% {
-    border-color: #f00; /* Red */
-  }
-  25% {
-    border-color: #0f0; /* Green */
-  }
-  50% {
-    border-color: #00f; /* Blue */
-  }
-  75% {
-    border-color: #ff0; /* Yellow */
-  }
-  100% {
-    border-color: #f00; /* Red */
-  }
-}
+  Modifications: `const customStyle = {
 
-.animate-gradient-border {
-  animation: gradient-border 3s infinite;
-}`,
+    lineHeight: '1.5',
+  
+    fontSize: '1rem',
+  
+    borderRadius: '5px',
+  
+    backgroundColor: '#f7f7f7',
+  
+    padding: '20px'
+  
+  };`,
 
   dependencies: [
     'npm install framer-motion',

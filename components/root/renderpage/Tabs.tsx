@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const Tabs = ({ activeTab, setActiveTab }: { activeTab: number; setActiveTab: (index: number) => void }) => (
-    <div className="flex border-b border-white mt-10 w-[90%] max-sm:mx-auto">
+    <div className="flex border-b border-white mt-10 mx-auto">
         {["Overview", "Code"].map((tab, index) => (
             <button
                 key={index}

@@ -1,9 +1,10 @@
+export const CodeBlockSnippet=`
 import { useState, useEffect, useRef } from "react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import CopyButton from "@/components/root/renderpage/CopyButton";
 
-const CodeBlock = ({ id, code, language = "jsx" }: { id: string; code: string; language?: string }) => {
+const CodeBlock = ({ id, code, language = "javascript" }: { id: string; code: string; language?: string }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [shouldShowExpand, setShouldShowExpand] = useState(false);
     const [initialHeight, setInitialHeight] = useState<number | undefined>(undefined);
@@ -22,21 +23,20 @@ const CodeBlock = ({ id, code, language = "jsx" }: { id: string; code: string; l
 
     return (
         <div
-            className={`relative flex flex-col mr-4 justify-between border border-zinc-600 bg-zinc-900 lg:max-w-[80%] overflow-hidden mt-5 rounded-lg p-4 text-lg ${isExpanded ? "h-auto" : `h-[${initialHeight}px]`}`}
+            className={\`relative flex flex-col justify-between border border-zinc-600 bg-zinc-900 w-[100%] md:w-[90%] overflow-hidden mt-5 rounded-lg p-4 text-lg \${isExpanded ? "h-auto" : \`h-[\${initialHeight}px]\`}\`}
         >
             <div
                 id={id}
                 ref={codeContainerRef}
-                className={`max-w-[85%] ${isExpanded ? "h-auto overflow-auto" : `max-h-96 overflow-hidden`}`}
+                className={\`max-w-[85%] \${isExpanded ? "h-auto overflow-auto" : "max-h-96 overflow-hidden"}\`}
             >
                 <SyntaxHighlighter
                     language={language}
-                    style={vscDarkPlus}
+                    style={solarizedlight}
                     customStyle={{
                         background: "none", // Removes the background color
                         padding: 0,
                         fontSize: '1rem',
-                        color: 'white',
                     }}
                     codeTagProps={{ style: { backgroundColor: "transparent" } }} // Ensures transparency
                 >
@@ -61,3 +61,4 @@ const CodeBlock = ({ id, code, language = "jsx" }: { id: string; code: string; l
 };
 
 export default CodeBlock;
+`;
