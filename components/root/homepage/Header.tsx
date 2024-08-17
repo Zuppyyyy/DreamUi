@@ -13,7 +13,7 @@ export function Header() {
 
             <Boxes />
             <div className="relative z-20 ">
-                <div className="flex flex-col justify-start md:mt-[6rem] p-10">
+                <div className="flex flex-col justify-start mt-[1.5rem] md:mt-[6rem] p-10">
 
                     <h1 className="text-5xl text-white font-black  max-sm:text-3xl ">
                         The Complete UI Library <br /> Made By Students For Students, Developers
