@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="py-6 border-t bg-[#000000] text-white">
-            <div className="container md:mx-auto flex flex-col md:flex-row items-center justify-between">
+        <footer className="py-6 border-t px-2 bg-[#000000] text-white">
+            <div className="container mx-auto flex flex-col md:flex-row max-sm:gap-4 items-center justify-between">
                 <div>
                     <p className="text-sm text-muted-foreground">&copy; 2024 Dream UI. All rights reserved.</p>
                 </div>
@@ -13,9 +13,6 @@ const Footer = () => {
                     </Link>
                     <Link href="#" className="text-sm hover:underline" prefetch={false}>
                         Privacy Policy
-                    </Link>
-                    <Link href="#" className="text-sm hover:underline" prefetch={false}>
-                        Sitemap
                     </Link>
                     <Link href="#" className="text-sm hover:underline" prefetch={false}>
                         Contact Us

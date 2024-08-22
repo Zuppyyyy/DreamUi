@@ -1,7 +1,5 @@
 import i1 from "@/src/render/Comp-images/react/id1/thumbnail.png";
-import i_1 from "@/src/render/Comp-images/react/id1/overview.png"
-import { CodeBundle } from '@/components/render/nextRen/ProfileCard';
-import { BoprderBoxBundle } from "@/components/render/nextRen/BorderBox";
+import i_1 from "@/src/render/Comp-images/react/id1/overview.png";
 import { CodeSnippetBundle } from "@/components/render/reactRen/id1/Bundle";
 
 export const Reactcomponents = [
