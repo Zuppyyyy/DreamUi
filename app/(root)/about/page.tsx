@@ -1,9 +1,9 @@
-import About from "@/components/root/aboutpage/About"
+import Header from "@/components/root/aboutpage/AboutHeader"
 
 const Aboutpage = () => {
   return (
     <div className="bg-white h-screen">
-    <About />
+      <Header />
     </div>
   );
 };
