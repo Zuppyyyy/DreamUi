@@ -42,7 +42,7 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className="hidden md:block">
-                            <a href="about" className="font-normal md:text-sm hover:text-blue-200">About Us</a>
+                            <a href="/about" className="font-normal md:text-sm hover:text-blue-200">About Us</a>
                         </div>
                         <div className="flex gap-4 md:hidden ">
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200">
