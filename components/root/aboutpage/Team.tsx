@@ -7,7 +7,7 @@ import { HiArrowRight } from "react-icons/hi"; // Import arrow icon
 
 const MeetTheTeam: React.FC = () => {
     return (
-        <div className="p-20 w-full">
+        <div className="p-5 pb-10 sm:p-20 w-full">
             <h1 className="max-w-7xl sm:pl-4 sm:mx-5 text-xl md:text-5xl font-bold text-neutral-200">
                 Meet the <span className="text-purple">Team</span>
             </h1>
@@ -58,7 +58,6 @@ const MeetTheTeam: React.FC = () => {
                     </Button>
                 ))}
             </div>
-            <span className="mx-auto mt-[5rem] block h-1 w-[95%] bg-gradient-to-r from-blue-500 to-green-500 rounded-full"></span>
         </div>
     );
 };

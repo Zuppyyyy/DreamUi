@@ -17,7 +17,7 @@ const Intro = () => {
           DreamUI began as a spark of inspiration among a group of passionate college students. Driven by a shared vision to innovate in the digital space, we embarked on a journey to transform creative ideas into reality.
         </p>
 
-        <div className="w-full mt-8 mx-5 p-5 flex justify-center">
+        <div className="w-full mt-8 sm:mx-5 sm:p-5 flex justify-center">
           <Image
             src={i1}
             alt="DreamUI Showcase"
