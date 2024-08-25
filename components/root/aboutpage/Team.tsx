@@ -49,7 +49,7 @@ const MeetTheTeam: React.FC = () => {
                                             rel="noopener noreferrer"
                                             className="text-lg text-green-500 hover:text-green-700 flex items-center justify-center gap-2"
                                         >
-                                            Check out {member.name}'s portfolio <HiArrowRight className="text-xl" />
+                                            Check out {member.name}&apos;s portfolio <HiArrowRight className="text-xl" />
                                         </a>
                                     </div>
                                 )}
